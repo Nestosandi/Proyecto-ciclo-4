@@ -1,16 +1,25 @@
-import './styles/App.css';
-import Header from './components/Header'
-import Menu from './components/Menu'
+import React from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import './styles/App.css'
+import Menu from './vistas/Menu'
+import Login from './vistas/login'
+import Register from './vistas/register'
+import Index from './vistas/Landing'
+import Mesas from './vistas/Mesas'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Footer from './components/Footer'
+
 
 function App() {
   return (
-    <>
-    <Header/>
-    <Menu/>
-    <Footer/>
-    </>
+    <Router>
+    <Routes>
+    <Route path="/" element={<Index/>}/>
+    <Route path="/menu" element={<Menu/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/register" element={<Register/>}/>
+    <Route path="/mesas" element={<Mesas/>}/>
+    </Routes>
+    </Router>
   );
 }
 

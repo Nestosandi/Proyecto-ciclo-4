@@ -3,15 +3,16 @@ import React, { Component } from "react";
 export default class Columna extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <span>
+      <>
+        <h6 id="return">
+          <a id="ah2" href="/">
             <svg
+              id="flecha"
               xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
+              width="20"
+              height="20"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 25 25"
             >
               <path
                 fill="#6A696E"
@@ -19,9 +20,9 @@ export default class Columna extends Component {
               ></path>
             </svg>
             Regresar al menú principal
-          </span>
-        </div>
-      </div>
+          </a>
+        </h6>
+      </>
     );
   }
 }
